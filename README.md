@@ -40,3 +40,5 @@ This ensures that Shield uses the modified view with username suggestions during
 * Shows available username options to users
 * Allows one-click selection of suggested usernames
 
+![alt text](image.png)
+
