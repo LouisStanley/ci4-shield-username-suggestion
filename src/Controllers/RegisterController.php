@@ -2,8 +2,8 @@
 
 namespace LouisStanley\Ci4ShieldUsernameSuggest\Controllers;
 
-use CodeIgniter\Shield\Controllers\RegisterController as ShieldRegister;
 use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\Shield\Controllers\RegisterController as ShieldRegister;
 
 class RegisterController extends ShieldRegister
 {
@@ -22,17 +22,18 @@ class RegisterController extends ShieldRegister
     {
         $email = $this->request->getPost('email');
 
-        if (!empty($email)) {
+        if (! empty($email)) {
             $suggestions = generate_username_suggestions($email, $this->config->suggestionCount ?? 5);
+
             return $this->response->setJSON([
-                'success' => true,
-                'suggestions' => $suggestions
+                'success'     => true,
+                'suggestions' => $suggestions,
             ]);
         }
 
         return $this->response->setJSON([
             'success' => false,
-            'message' => 'No email provided'
+            'message' => 'No email provided',
         ]);
     }
 }
