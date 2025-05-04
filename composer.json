@@ -1,0 +1,33 @@
+{
+    "name": "louisstanley/ci4-shield-username-suggest",
+    "description": "A CodeIgniter 4 Shield extension to suggest usernames based on email addresses.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LouisStanley\\Ci4ShieldUsernameSuggest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Louis Stanley"
+        }
+    ],
+    "require": {
+        "codeigniter4/framework": "^4.3",
+        "codeigniter4/shield": "^1.0"
+    },
+    "require-dev": {
+        "codeigniter4/devkit": "^1.3"
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix --ansi --verbose --diff"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
